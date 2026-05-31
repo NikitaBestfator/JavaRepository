@@ -116,7 +116,9 @@ public class Main {
 //        var ceo = melkosoft.getCEO();
 //        System.out.println(ceo.getId());
 //        System.out.println(ceo.getName());
-
+        Person_Third<Integer, String> tom = new Person_Third<Integer, String>(546, "Tom", "Qwerty38");
+        System.out.println(tom.getId());
+        System.out.println(tom.getPassword());
     }
     // static String[] messages = {"Good morning", "Good afternoon", "Good evening", "Good night"};
 
