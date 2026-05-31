@@ -96,6 +96,27 @@ public class Main {
 //        System.out.println(op.action(10, 4));
 //        op = Operation.MULTIPLY;
 //        System.out.println(op.action(6, 4));
+//        var tom = new Person(546, "Tom");
+//        tom.print; // ID: 546, Name: Tom
+//        // разные типы данных, объединенные в объект
+//        var bob = new Person("zpio9", "Bob");
+//        bob.print(); // Id: zpio9; Name: Bob
+//        Person<Integer> tom = new Person<Integer>(546, "Tom");
+//        Person<String> bob = new Person<String>("ajlfq90", "Bob");
+//
+//        Integer tomId = tom.getId();
+//        String bobId = bob.getId();// преобразование типов не нужно
+//
+//        System.out.println(tomId);
+//        System.out.println(bobId);
+//
+//        Person<Integer> john = new Person<Integer>(546, "John");
+//        Company<Person<Integer>> melkosoft = new Company <Person<Integer>>(john);
+//
+//        var ceo = melkosoft.getCEO();
+//        System.out.println(ceo.getId());
+//        System.out.println(ceo.getName());
+
     }
     // static String[] messages = {"Good morning", "Good afternoon", "Good evening", "Good night"};
 
@@ -233,3 +254,12 @@ class Button{
 //    };
 //    abstract int action(int x, int y);
 //}
+class Company<P>{// класс, который хранит президента компании
+    private P ceo;
+    P getCEO(){
+        return ceo;
+    }
+    Company(P ceo){
+        this.ceo = ceo;
+    }
+}
