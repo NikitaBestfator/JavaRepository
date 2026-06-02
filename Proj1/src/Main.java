@@ -1,4 +1,5 @@
 // Первое задание 27.04.2026
+import javax.annotation.processing.Messager;
 import java.util.Scanner;
 
 public class Main {
@@ -116,10 +117,27 @@ public class Main {
 //        var ceo = melkosoft.getCEO();
 //        System.out.println(ceo.getId());
 //        System.out.println(ceo.getName());
-        Person_Third<Integer, String> tom = new Person_Third<Integer, String>(546, "Tom", "Qwerty38");
-        System.out.println(tom.getId());
-        System.out.println(tom.getPassword());
+//        Person_Third<Integer, String> tom = new Person_Third<Integer, String>(546, "Tom", "Qwerty38");
+//        System.out.println(tom.getId());
+//        System.out.println(tom.getPassword());
+//        Printer printer = new Printer();// вызов обобщенного метода printer
+//        String[] people = {"Tom", "Alice", "Sam", "Kate", "Bob"};
+//        Integer[] numbers = {23, 4, 5, 90, 13};
+//        printer.print(people);
+//        printer.print(numbers);
+//        EmailMessage email = new EmailMessage("Hello, you sleep?", "addressmy@vmail.com");
+//        Messenger<EmailMessage> mailClient = new Messenger<EmailMessage>(email);// также можно использовать краткое var
+//        mailClient.send();// либо Messenger<EmailMessage> mailClient = new Messenger<>(email)
+//
+//        SmsMessage sms = new SmsMessage("You sleep?", "+72312563782");
+//        Messenger<SmsMessage> phone = new Messenger<SmsMessage>(sms);
+//        phone.send();
+//        sendMessage(new Message("Hello world"));
+//        sendMessage(new EmailMessage_1("Bye world"));
     }
+//    static <T extends Message> void sendMessage(T message){
+//        System.out.println("Send message: "+ message.getText());
+//    }
     // static String[] messages = {"Good morning", "Good afternoon", "Good evening", "Good night"};
 
 }
@@ -206,7 +224,7 @@ class Button{
 //}
 //enum OpType{
 //    ADD,
-//    SUBSTRACT,
+//    SUBTRACT,
 //    MULTIPLY
 //}
 //class Operation{
@@ -222,7 +240,7 @@ class Button{
 //    int execute(){
 //        return switch(type){
 //            case ADD -> op1 + op2;
-//            case SUBSTRACT -> op1 - op2;
+//            case SUBTRACT -> op1 - op2;
 //            case MULTIPLY -> op1 * op2;
 //        };
 //    }
@@ -256,12 +274,45 @@ class Button{
 //    };
 //    abstract int action(int x, int y);
 //}
-class Company<P>{// класс, который хранит президента компании
-    private P ceo;
-    P getCEO(){
-        return ceo;
-    }
-    Company(P ceo){
-        this.ceo = ceo;
-    }
-}
+//class Company<P>{// класс, который хранит президента компании
+//    private P ceo;
+//    P getCEO(){
+//        return ceo;
+//    }
+//    Company(P ceo){
+//        this.ceo = ceo;
+//    }
+//}
+// обобщенный интерфейс
+//interface Accountable<T>{
+//    T getId();
+//    int getSum();
+//    void setSum();
+//}
+//class Account<T> implements Accountable<T>{
+//    private T id;
+//    private int sum;
+//
+//    Account(T id, int sum){
+//        this.id=id;
+//        this.sum=sum;
+//    }
+//    public T getId(){
+//        return id;
+//    }
+//    public int getSum(){
+//        return sum;
+//    }
+//    public void setSum(int sum){
+//        this.sum = sum;
+//    }
+//}
+// обобщенные методы
+//class Printer{
+//    public <T> void print(T[] items){
+//        for(T item: items){
+//            System.out.println(item);
+//        }
+//    }
+//}
+// Обобщенные конструкторы
