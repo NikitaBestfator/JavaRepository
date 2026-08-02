@@ -1,4 +1,4 @@
-public class Employee extends Person{
+//public class Employee extends Person{
     /*private String company;
 
     //если было бы final class Person унаследовать этот класс нельзя было
@@ -16,18 +16,21 @@ public class Employee extends Person{
     }*/
     private String company;
 
-    Employee(String name, String company){
-        super(name);
-        this.company = company;
-    }
-
-    @Override
-    public boolean equals(Object otherObject){
-        if (!super.equals(otherObject)) return false;// super - так как базовый класс Person
-        // super.equals проверяет, что this и otherObject представляют один и тот же класс
-        Employee empl = (Employee)otherObject;
-        //и проверяем равенство их координат
-        return this.company.equals(empl.company);
-    }
-
+void main() {
 }
+
+//    Employee(String name, String company){
+//        super(name);
+//        this.company = company;
+//    }
+
+//    @Override
+//    public boolean equals(Object otherObject){
+//        if (!super.equals(otherObject)) return false;// super - так как базовый класс Person
+//        // super.equals проверяет, что this и otherObject представляют один и тот же класс
+//        Employee empl = (Employee)otherObject;
+//        //и проверяем равенство их координат
+//        return this.company.equals(empl.company);
+//    }
+//
+//}

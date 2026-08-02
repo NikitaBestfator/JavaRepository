@@ -134,6 +134,19 @@ public class Main {
 //        phone.send();
 //        sendMessage(new Message("Hello world"));
 //        sendMessage(new EmailMessage_1("Bye world"));
+          // Встроенные функциональные интерфейсы
+          // 1
+//          Predicate<Integer> isPositiv = x -> x > 0;
+//          System.out.println(isPositiv.test(5));
+//          System.out.println(isPositiv.test(-7));
+          // 2
+//          BinaryOperator<Integer> multiply = (x, y) -> x*y;
+//          System.out.println(multiply.apply(3, 5));
+//          System.out.println(multiply.apply(10, -2));
+          // 3
+          UnaryOperator<Integer> square = x -> x*x;
+          System.out.println(square.apply(5));
+
     }
 //    static <T extends Message> void sendMessage(T message){
 //        System.out.println("Send message: "+ message.getText());
