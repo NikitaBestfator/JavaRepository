@@ -1,6 +1,4 @@
 // Первое задание 27.04.2026
-import javax.annotation.processing.Messager;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -144,8 +142,27 @@ public class Main {
 //          System.out.println(multiply.apply(3, 5));
 //          System.out.println(multiply.apply(10, -2));
           // 3
-          UnaryOperator<Integer> square = x -> x*x;
-          System.out.println(square.apply(5));
+          // UnaryOperator<Integer> square = x -> x*x;
+          // System.out.println(square.apply(5));
+          // 4
+//          Function<Integer, String> convert = x -> String.valueOf(x) + " долларов";
+//          System.out.println(convert.apply(5));
+          // 5
+//          BiFunction<Integer, Integer, Integer> sum = (x, y) -> x + y;
+//          System.out.println(sum.apply(3, 5));
+//          System.out.println(sum.apply(10, -2));
+          // 6
+//          Consumer<Integer> printer = x -> System.out.printf("%d долларов \n", x);
+//          printer.accept(600);
+          // 7
+          // для так называемых ленивых вычислений для того,
+        // чтобы результат вычисления потребуется через некоторое время
+//          Supplier<Integer> randomValue = ()-> (int)(Math.random() * 10) + 1;
+//          System.out.println("Случайное значение");
+//          System.out.println(randomValue.get()); // реальные вычисления
+        //переменная randomValue представляет выражение по вычислению случайного значения,
+        // но реальное вычисление происходит,
+        // когда вызывается метод get() для получения этого значения
 
     }
 //    static <T extends Message> void sendMessage(T message){
