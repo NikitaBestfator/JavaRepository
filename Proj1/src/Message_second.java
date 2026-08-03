@@ -18,14 +18,14 @@ interface Message1{
 // Program prog = new Program();
 // Message mes = prog::hello;
 // метод с параметрами
-interface Operation{
-    int execute(int x, int y);
-}
-class Operations{
-    static int add(int a, int b){return a + b;}
-    static int sub(int a, int b){return a - b;}
-    static int mul(int a, int b){return a * b;}
-}
+//interface Operation{
+//    int execute(int x, int y);
+//}
+//class Operations{
+//    static int add(int a, int b){return a + b;}
+//    static int sub(int a, int b){return a - b;}
+//    static int mul(int a, int b){return a * b;}
+//}
 // тогда в главном файле будет
 // Operation op = Operations::add;
 // op = Operations::sub;
@@ -52,18 +52,18 @@ class Operations{
 // то есть здесь переменная action
 // хранит в себе ссылку Program::sum
 // Ссылки на конструкторы
-class User{
-    private String name;
-    String getName(){
-        return name;
-    }
-    User(String n){
-        this.name = n;
-    }
-}
-interface  UserBuilder{
-    User create(String name);
-}
+//class User{
+//    private String name;
+//    String getName(){
+//        return name;
+//    }
+//    User(String n){
+//        this.name = n;
+//    }
+//}
+//interface  UserBuilder{
+//    User create(String name);
+//}
 // и то что будет в главной странице
 // UserBuilder userBuilder = User::new;
 // User user = userBuilder.create("Tom");
@@ -76,9 +76,9 @@ interface  UserBuilder{
 
 // Введение в лямбда-выражения
 
-interface Operationable{
-    int execute(int x, int y);
-}
+//interface Operationable{
+//    int execute(int x, int y);
+//}
 //  главном файле Main будет Operationable op;
 // op = (x, y) -> x+y
 // использование лямбда-выражения
@@ -105,3 +105,33 @@ interface Operationable{
 // Выполнение кода только в том случае,
 // когда он необходим и если он необходим
 // Лямбды и локальные переменные ;%:
+// Sealed-классы и интерфейсы
+//sealed class Operation permits Shape, Person, PersonTen
+//{}
+//class Divide extends Operation - ошибка не разрешено наследование
+// разрешенные подклассы sealed-классы должны быть доступны
+// должны быть написаны в том же пакете что и sealed-класс
+// sealed-класс может быть объявлен без ключевого слова permits
+// final запрещает любое дальнейшее наследование
+// sealed разрешает ограниченное дальнейшее наследование
+// non-sealed открывает этот подкласс для расширения любыми классами
+//sealed abstract class Operation permits Sum, Subtract
+//{
+//    int op1;
+//    int op2;
+//    Operation(int op1, int op2){
+//        this.op1 = op1;
+//        this.op2=op2;
+//    }
+//    abstract int execute();
+//}
+//final class Sum extends Operation{
+//    Sum(int op1, int op2){super(op1, op2);}
+//    @Override int execute() {return op1 + op2;}
+//}
+//final class Subtract extends Operation{
+//    Subtract(int op1, int op2){super(op1, op2);}
+//    @Override int execute() {return op1 - op2;}
+//} // абстрактный класс определен как запечатанный sealed-класс
+// sealed-интерфейсы
+//public sealed interface Shape permits ...
