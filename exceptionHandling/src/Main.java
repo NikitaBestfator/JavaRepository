@@ -1,13 +1,39 @@
-//TIP Чтобы <b>запустить</b> код, нажмите <shortcut actionId="Run"/> или
-// нажмите на значок <icon src="AllIcons.Actions.Execute"/> в поле.
-void main() {
-    //TIP Нажмите <shortcut actionId="ShowIntentionActions"/>, когда курсор находится на выделенном тексте
-    // чтобы увидеть, как OpenIDE предлагает это исправить.
-    IO.println(String.format("Hello and welcome!"));
+class Program{
+    public static void main(String[] args){
+//        int a = 5;
+//        int b = 0;
+//        int result = a / b;
+//        System.out.printf("Результат: %d\n", result);
+//        divide(10, 2);
+//        divide(10, 0);
+//        System.out.println("Конец программы");
+        int result = parse("5");
+        System.out.println(result);
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Нажмите <shortcut actionId="Debug"/>, чтобы начать отладку вашего кода. Мы установили одну <icon src="AllIcons.Debugger.Db_set_breakpoint"/> точку останова
-        // для вас, но вы всегда можете добавить больше, нажав <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+        result = parse("t");
+        System.out.println(result);
+    }
+//    static void divide(int a, int b){
+//
+//        try{
+//            int result = a / b;
+//            System.out.printf("Результат: %d\n", result);
+//        }
+//        catch(ArithmeticException e){
+//            System.out.println("Возникло исключение!");
+//        }
+//        finally {
+//            System.out.println("Блок finally");
+//        }
+//    }
+    static int parse(String s){
+        try{
+            return Integer.parseInt(s);
+        }
+        catch(Throwable _){
+            System.out.println("Ошибка преобразования");
+            return 0;
+        }
     }
 }
+// try...catch...finally
